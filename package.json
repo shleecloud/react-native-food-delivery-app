@@ -23,7 +23,8 @@
     "react-native-keyboard-aware-scrollview": "^2.1.0",
     "react-native-safe-area-context": "^5.0.0",
     "react-native-screens": "^3.22.1",
-    "react-redux": "^9.2.0"
+    "react-redux": "^9.2.0",
+    "socket.io-client": "^4.8.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
