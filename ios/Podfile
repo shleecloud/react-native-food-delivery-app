@@ -23,6 +23,9 @@ target 'FoodDeliveryApp' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
+  # Add react-native-config
+  pod 'react-native-config', :path => '../node_modules/react-native-config'
+
   target 'FoodDeliveryAppTests' do
     inherit! :complete
     # Pods for testing
