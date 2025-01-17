@@ -509,7 +509,7 @@ const useSocket = (): [Socket | undefined, () => void] => {
     }
   }, []);
   if (!socket) {
-    socket = io(`${Config.API_URL}`, {
+    socket = io(`http://localhost:3105`, {
       transports: ['websocket'],
     });
   }
@@ -598,7 +598,7 @@ useEffect(() => {
         return;
       }
       const response = await axios.post(
-        `${Config.API_URL}/refreshToken`,
+        `http://localhost:3105/refreshToken`,
         {},
         {
           headers: {
@@ -682,7 +682,7 @@ useEffect(() => {
           const refreshToken = await EncryptedStorage.getItem('refreshToken');
           // token refresh 요청
           const {data} = await axios.post(
-            `${Config.API_URL}/refreshToken`, // token refresh api
+            `http://localhost:3105/refreshToken`, // token refresh api
             {},
             {headers: {authorization: `Bearer ${refreshToken}`}},
           );
